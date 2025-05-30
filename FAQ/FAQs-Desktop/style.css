@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+@font-face{
+  font-family: 'WorkSans-Bold';
+  src: url(fonts/WorkSans-Bold.ttf);
+}
+@font-face{
+  font-family: 'WorkSans-semiBold';
+  src: url(fonts/WorkSans-SemiBold.ttf);
+}
+
+body {
+    background-image: url("background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% ;
+    background-color: rgb(248, 216, 220);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column; 
+
+  }
+
+
+.card {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+  padding: 20px;
+  margin-top: 10%;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease;
+}
+.card:hover{
+  transform: translateY(-20px);
+}
+.title {
+  display: flex;
+  padding-bottom: 15px;
+  gap: 15px;
+
+}
+#icon-star {
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-name: star;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease;
+
+}
+#icon-star:hover{
+  animation-play-state: paused;
+}
+
+
+
+@keyframes star {
+  0%{
+    rotate: 360deg;
+  }
+}
+
+
+
+
+.FAQs {
+  font-family: 'WorkSans-Bold';
+  color: rgb(0, 0, 0);
+  font-size: 45px;
+  font-weight: 700;
+  
+}
+p {
+  font-size: 16px;
+}
+
+.frage {
+  font-family: 'WorkSans-semiBold';
+  font-weight: 600;
+  transition: 8ms;
+  padding-bottom: 20px;
+  gap: 100px;
+}
+#small{
+  width: 400px;
+}
+
+.frage:hover {
+  color: hsl(276, 75%, 62%)
+}
+
+  
+
+.content-child{
+  padding-bottom: 3px;
+  padding-top: 3px;
+  gap: 200px;
+  margin-left: 25px;
+  display: flex;
+}
+
+
+.txt {
+  opacity: 0;
+  height: 0;
+  margin-left: 23px;
+  text-align: left;
+  font-size: medium;
+  color: hsl(292, 16%, 49%);
+  transition: height 0.5s 1ms ease-in-out;
+
+}
+
+.open {
+  height: 3rem;
+  opacity: 1;
+  transition: height 0.5s 1ms ease-in-out;
+
+}
+
+.item {
+  margin-top: 2rem;
+}
+.directed{
+  display: flex;
+  margin-top: 220px;
+  text-align: center;
+  justify-content: center;
+
+
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 700px;
+    padding: 30px;
+    margin-top: 5%;
+  }
+
+  .FAQs {
+    font-size: 50px;
+  }
+
+  .frage {
+    font-size: 20px;
+  }
+
+  .txt {
+    font-size: 18px;
+  }
+
+  .directed {
+    margin-top: 100px;
+  }
+}

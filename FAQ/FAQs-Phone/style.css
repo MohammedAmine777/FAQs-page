@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+@font-face{
+  font-family: 'WorkSans-Bold';
+  src: url(fonts/WorkSans-Bold.ttf);
+}
+@font-face{
+  font-family: 'WorkSans-semiBold';
+  src: url(fonts/WorkSans-SemiBold.ttf);
+}
+
+body {
+    background-image: url("background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% ;
+    background-color: rgb(248, 216, 220);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column; 
+
+  }
+
+
+.card {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  width: 375px;
+  padding: 20px;
+
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease;
+}
+.card:hover{
+  transform: translateY(-20px);
+}
+.title {
+  display: flex;
+  padding-bottom: 15px;
+  
+
+}
+#icon-star {
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-name: star;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: ease;
+
+}
+#icon-star:hover{
+  animation-play-state: paused;
+}
+
+
+
+@keyframes star {
+  0%{
+    rotate: 360deg;
+  }
+}
+
+.FAQs {
+  font-family: 'WorkSans-Bold';
+  color: rgb(0, 0, 0);
+  font-size: 35px;
+  font-weight: 700;
+  
+}
+p {
+  font-size: 16px;
+}
+.frage {
+  font-family: 'WorkSans-semiBold';
+  font-weight: 600;
+  transition: 8ms;
+
+  font-size: medium;
+  padding-bottom: 10px;
+
+}
+#small{
+  width: 400px;
+}
+
+.frage:hover {
+  color: hsl(276, 75%, 62%)
+}
+
+  
+
+.content-child{
+  padding-bottom: 3px;
+  padding-top: 3px;
+  gap: 5px;
+
+  display: flex;
+}
+
+
+.txt {
+  opacity: 0;
+  height: 0;
+  margin-left: 23px;
+  text-align: left;
+  font-size: small;
+  color: hsl(292, 16%, 49%);
+  transition: height 0.5s 1ms ease-in-out;
+
+}
+
+.open {
+  height: 3rem;
+  opacity: 1;
+  transition: height 0.5s 1ms ease-in-out;
+
+}
+
+.item {
+  margin-top: 3rem;
+}
+.directed{
+  display: flex;
+  margin-top: 210px;
+  text-align: center;
+  justify-content: center;
+  text-align: end;
+
+
+}
+@media (max-width: 430px) {
+  body {
+    background-image: url("background-pattern-mobile.svg");
+    background-size: cover;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% ;
+  }
+
+  .card {
+    margin-top: 150px;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .FAQs {
+    font-size: 28px;
+  }
+
+  .frage {
+    font-size: small;
+  }
+
+  .txt {
+    font-size: 14px;
+  }
+
+  .directed {
+    margin-top: 100px;
+  }
+}
